@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Seleção de Elementos ---
+    //  Seleção de Elementos no JS
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     const menuIcon = document.getElementById('menu-icon');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const closeBtn = document.querySelector('.close-btn');
 
-    // --- Alternância de Tema (Claro/Escuro) ---
+    //  Alterando o Tema (Claro/Escuro)
     themeToggle.addEventListener('click', () => {
         if (body.classList.contains('light-theme')) {
             body.classList.replace('light-theme', 'dark-theme');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.className = savedTheme;
     }
 
-    // --- Menu Responsivo ---
+    //  Menu Responsivo 
     menuIcon.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Validação e Simulação de Envio do Formulário ---
+    //  Validação e Simulação de Envio do Formulário 
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Impede o recarregamento da página
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Validação do E-mail (Regex simples)
+        // Validação do E-mail
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email === '') {
             document.getElementById('error-email').textContent = 'O e-mail é obrigatório.';
